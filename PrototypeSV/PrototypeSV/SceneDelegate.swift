@@ -16,8 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        
+        let searchVC = SearchViewController()
+        let navigationController = UINavigationController(rootViewController: searchVC)
+        navigationController.navigationBar.tintColor = .white
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
