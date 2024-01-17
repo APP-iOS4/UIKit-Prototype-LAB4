@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CDAAAF2B576364001AA4BD /* FourthSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CDAAAE2B576364001AA4BD /* FourthSceneViewController.swift */; };
+		01CDAAB12B576642001AA4BD /* Edited.004.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDAAB02B576642001AA4BD /* Edited.004.png */; };
 		1F9FF5BE2B5755FE00213815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF5BD2B5755FE00213815 /* AppDelegate.swift */; };
 		1F9FF5C02B5755FE00213815 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF5BF2B5755FE00213815 /* SceneDelegate.swift */; };
 		1F9FF5C22B5755FE00213815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF5C12B5755FE00213815 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CDAAAE2B576364001AA4BD /* FourthSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthSceneViewController.swift; sourceTree = "<group>"; };
+		01CDAAB02B576642001AA4BD /* Edited.004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Edited.004.png; path = ../../Images/Edited/Edited.004.png; sourceTree = "<group>"; };
 		1F9FF5BA2B5755FE00213815 /* PrototypeSV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeSV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9FF5BD2B5755FE00213815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9FF5BF2B5755FE00213815 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +67,11 @@
 				9BE906CB2B576236007C2C27 /* SearchViewController.swift */,
 				9BE906CF2B5762B6007C2C27 /* Images */,
 				1F9FF5C12B5755FE00213815 /* ViewController.swift */,
+				01CDAAAE2B576364001AA4BD /* FourthSceneViewController.swift */,
 				1F9FF5C62B5755FF00213815 /* Assets.xcassets */,
 				1F9FF5C82B5755FF00213815 /* LaunchScreen.storyboard */,
 				1F9FF5CB2B5755FF00213815 /* Info.plist */,
+				01CDAAB02B576642001AA4BD /* Edited.004.png */,
 			);
 			path = PrototypeSV;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 				9BE906CE2B5762AC007C2C27 /* Search.png in Resources */,
 				1F9FF5CA2B5755FF00213815 /* LaunchScreen.storyboard in Resources */,
 				1F9FF5C72B5755FF00213815 /* Assets.xcassets in Resources */,
+				01CDAAB12B576642001AA4BD /* Edited.004.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +160,7 @@
 				1F9FF5BE2B5755FE00213815 /* AppDelegate.swift in Sources */,
 				9BE906CC2B576236007C2C27 /* SearchViewController.swift in Sources */,
 				1F9FF5C02B5755FE00213815 /* SceneDelegate.swift in Sources */,
+				01CDAAAF2B576364001AA4BD /* FourthSceneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
