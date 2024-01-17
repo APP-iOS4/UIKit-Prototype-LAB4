@@ -35,9 +35,9 @@ class HomeViewController: ViewController {
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         scrollView.contentSize = CGSize(width: view.frame.width, height: 1000)
@@ -47,8 +47,15 @@ class HomeViewController: ViewController {
         contentStackView.spacing = 20
         
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
+        
         scrollView.addSubview(contentStackView)
         
+        NSLayoutConstraint.activate([
+            contentStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10),
+            contentStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10)
+        ])
         // contentStackView 안쪽 내용들
         
         // MARK: - First Cell
@@ -58,9 +65,10 @@ class HomeViewController: ViewController {
         contentStackView.addArrangedSubview(label)
         
         let miniScrollView = UIScrollView()
-        miniScrollView.backgroundColor = .clear
-        miniScrollView.contentSize = CGSize(width: 600, height: 200)
+
+        miniScrollView.contentSize = CGSize(width: 650, height: 200)
         miniScrollView.translatesAutoresizingMaskIntoConstraints = false
+
         
         for i in 0 ... 3 {
             let imageView = UIImageView()
@@ -77,15 +85,12 @@ class HomeViewController: ViewController {
         button.addTarget(self, action: #selector(goToMovieScene), for: .touchUpInside)
         miniScrollView.addSubview(button)
         
-        
-        
         NSLayoutConstraint.activate([
-            miniScrollView.widthAnchor.constraint(equalToConstant: 350),
+            miniScrollView.widthAnchor.constraint(equalToConstant: 1800),
             miniScrollView.heightAnchor.constraint(equalToConstant: 200)
         ])
         
         contentStackView.addArrangedSubview(miniScrollView)
-        
         contentStackView.setCustomSpacing(30, after: miniScrollView)
         
         // MARK: - Second Cell
@@ -96,7 +101,7 @@ class HomeViewController: ViewController {
         
         let miniScrollView2 = UIScrollView()
         miniScrollView2.backgroundColor = .clear
-        miniScrollView2.contentSize = CGSize(width: 600, height: 200)
+        miniScrollView2.contentSize = CGSize(width: 650, height: 200)
         miniScrollView2.translatesAutoresizingMaskIntoConstraints = false
         
         for i in 0 ... 3 {
@@ -117,7 +122,7 @@ class HomeViewController: ViewController {
         miniScrollView2.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            miniScrollView2.widthAnchor.constraint(equalToConstant: 350),
+            miniScrollView2.widthAnchor.constraint(equalToConstant: view.frame.width),
             miniScrollView2.heightAnchor.constraint(equalToConstant: 200)
         ])
         
