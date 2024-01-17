@@ -154,7 +154,7 @@ class HomeViewController: ViewController {
     
     // MARK: - @objc function
     @objc func goToMovieScene() {
-        let nextViewController = SearchViewController()
+        let nextViewController = FourthSceneViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
