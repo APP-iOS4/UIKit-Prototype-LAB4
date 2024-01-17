@@ -9,6 +9,10 @@ import UIKit
 
 class HomeViewController: ViewController {
  
+    let searchMovies: [String] = ["fiftyShadow", "woman", "bangjajoen", "downFall"]
+    let mzMovies: [String] = ["springOfSeoul", "SlamDunk", "HarryPoter1", "waterOfRoad"]
+    let recommendMovies: [String] = ["secret", "blackPanther", "trash", "crayonShinChan"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +40,7 @@ class HomeViewController: ViewController {
             scrollView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
         ])
         
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 2500)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 1000)
         
         let contentStackView = UIStackView()
         contentStackView.axis = .vertical
@@ -55,22 +59,25 @@ class HomeViewController: ViewController {
         
         let miniScrollView = UIScrollView()
         miniScrollView.backgroundColor = .clear
-        miniScrollView.contentSize = CGSize(width: 825, height: 200)
+        miniScrollView.contentSize = CGSize(width: 600, height: 200)
+        miniScrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "searchImage")
-        imageView.frame = CGRect(x: 0, y: 0, width:825, height: 200)
-        miniScrollView.addSubview(imageView)
+        for i in 0 ... 3 {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: searchMovies[i])
+            imageView.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            miniScrollView.addSubview(imageView)
+        }
         
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
         let button = UIButton()
         button.backgroundColor = .clear
 //        button.alpha = 0.35
-        button.frame = CGRect(x: 0, y: 0, width:825, height: 200)
+        button.frame = CGRect(x: 0, y: 0, width:700, height: 200)
         button.addTarget(self, action: #selector(goToMovieScene), for: .touchUpInside)
         miniScrollView.addSubview(button)
         
-        miniScrollView.translatesAutoresizingMaskIntoConstraints = false
+        
         
         NSLayoutConstraint.activate([
             miniScrollView.widthAnchor.constraint(equalToConstant: 350),
@@ -89,18 +96,21 @@ class HomeViewController: ViewController {
         
         let miniScrollView2 = UIScrollView()
         miniScrollView2.backgroundColor = .clear
-        miniScrollView2.contentSize = CGSize(width: 825, height: 200)
+        miniScrollView2.contentSize = CGSize(width: 600, height: 200)
+        miniScrollView2.translatesAutoresizingMaskIntoConstraints = false
         
-        let imageView2 = UIImageView()
-        imageView2.image = UIImage(named: "MZImage")
-        imageView2.frame = CGRect(x: 0, y: 0, width: 825, height: 200)
-        miniScrollView2.addSubview(imageView2)
+        for i in 0 ... 3 {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: mzMovies[i])
+            imageView.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            miniScrollView2.addSubview(imageView)
+        }
         
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
         let button2 = UIButton()
         button2.backgroundColor = .clear
 //        button.alpha = 0.35
-        button2.frame = CGRect(x: 0, y: 0, width: 825, height: 150)
+        button2.frame = CGRect(x: 0, y: 0, width:700, height: 200)
         button2.addTarget(self, action: #selector(goToMovieScene), for: .touchUpInside)
         miniScrollView2.addSubview(button2)
         
@@ -123,19 +133,21 @@ class HomeViewController: ViewController {
 
         let miniScrollView3 = UIScrollView()
         miniScrollView3.backgroundColor = .clear
-        miniScrollView3.contentSize = CGSize(width: 825, height: 200)
-        miniScrollView3.frame = CGRect(x: 0, y: 0, width:300, height: 200)
+        miniScrollView3.contentSize = CGSize(width: 600, height: 200)
+        miniScrollView3.translatesAutoresizingMaskIntoConstraints = false
         
-        let imageView3 = UIImageView()
-        imageView3.image = UIImage(named: "recommend")
-        imageView3.frame = CGRect(x: 0, y: 0, width: 825, height: 200)
-        miniScrollView3.addSubview(imageView3)
+        for i in 0 ... 3 {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: recommendMovies[i])
+            imageView.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            miniScrollView3.addSubview(imageView)
+        }
         
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
         let button3 = UIButton()
         button3.backgroundColor = .clear
 //        button.alpha = 0.35
-        button3.frame = CGRect(x: 0, y: 0, width: 825, height: 200)
+        button3.frame = CGRect(x: 0, y: 0, width:700, height: 200)
         button3.addTarget(self, action: #selector(goToMovieScene), for: .touchUpInside)
         miniScrollView3.addSubview(button3)
         
