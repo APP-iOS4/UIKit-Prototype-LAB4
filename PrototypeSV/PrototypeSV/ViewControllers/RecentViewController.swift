@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecentViewController: UIViewController {
+class RecentViewController: ViewController {
     // MARK: - make Elements
     
     let titleLabel: UILabel = {
@@ -29,8 +29,6 @@ class RecentViewController: UIViewController {
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
         
         buildInterface()
     }

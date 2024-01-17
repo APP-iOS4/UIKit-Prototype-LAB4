@@ -17,13 +17,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         
-        let searchVC = SearchViewController()
-        let navigationController = UINavigationController(rootViewController: searchVC)
-        navigationController.navigationBar.tintColor = .white
+        // homeviewController
+        let homeViewController = HomeViewController()
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        homeNavigationController.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        homeNavigationController.tabBarItem.tag = 0
+        
+        // searchViewController
+        let searchViewController = SearchViewController()
+        let searchNavigationController = UINavigationController(rootViewController: searchViewController)
+        searchNavigationController.navigationBar.tintColor = .white
+        searchNavigationController.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 3)
+        
+        // recentViewController
+        let recentViewController = RecentViewController()
+        recentViewController.tabBarItem = UITabBarItem(title: "이어보기", image: UIImage(systemName: "play.rectangle"), tag: 1)
+        
+        // categoryTableViewController
+        let categoryTableViewController = CategoryTableViewController()
+        let categoryNavigationController = UINavigationController(rootViewController: categoryTableViewController)
+        categoryNavigationController.tabBarItem = UITabBarItem(title: "카테고리", image: UIImage(systemName: "list.bullet"), tag: 2)
+        
+        // tab bar
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+            homeNavigationController,
+            recentViewController,
+            categoryNavigationController,
+            searchNavigationController,
+        ]
+        
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navigationController
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 

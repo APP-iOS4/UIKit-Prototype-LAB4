@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: ViewController {
     
     let imageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
@@ -28,8 +28,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = .systemGray5
         
         buildInterface()
     }
@@ -53,7 +51,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func goToHarryPoter() {
-        let nextViewController = TestViewController()
+        let nextViewController = FourthSceneViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

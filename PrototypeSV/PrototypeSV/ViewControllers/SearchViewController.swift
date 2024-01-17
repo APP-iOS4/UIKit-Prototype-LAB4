@@ -7,13 +7,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: ViewController {
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .darkGray
         
         self.navigationController?.navigationBar.topItem?.title = ""
         
@@ -32,8 +30,13 @@ class SearchViewController: UIViewController {
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Search.png")
-        imageView.frame = CGRect(x: 0, y: 0, width: 400, height: 860)
+        imageView.image = UIImage(named: "NewSearch.png")
+        // imageView.frame = CGRect(x: 0, y: 0, width: 400, height: 860)
+        // imageView.frame.size.width = 400
+        // imageView.frame.size.height = 750
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
     }()
     
@@ -67,10 +70,11 @@ class SearchViewController: UIViewController {
         
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            imageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 35.0),
             imageView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
             imageView.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
             imageView.rightAnchor.constraint(equalTo: safeArea.rightAnchor),
+            
             stackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             stackView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             stackView.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
@@ -94,11 +98,12 @@ class SearchViewController: UIViewController {
             self.imageView.isHidden = true
             self.selectButton.isHidden = true
         }
+        
+        searchField.resignFirstResponder()
     }
     
     @objc func selectMovie() {
-        print("Hello")
-        let nextViewController = SearchViewController()
+        let nextViewController = FourthSceneViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
