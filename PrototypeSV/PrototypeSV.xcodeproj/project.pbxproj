@@ -12,6 +12,7 @@
 		1F9FF5C22B5755FE00213815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF5C12B5755FE00213815 /* ViewController.swift */; };
 		1F9FF5C72B5755FF00213815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9FF5C62B5755FF00213815 /* Assets.xcassets */; };
 		1F9FF5CA2B5755FF00213815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9FF5C82B5755FF00213815 /* LaunchScreen.storyboard */; };
+		42A3E63D2B576579007BBE02 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3E63C2B576579007BBE02 /* CategoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1F9FF5C62B5755FF00213815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F9FF5C92B5755FF00213815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F9FF5CB2B5755FF00213815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A3E63C2B576579007BBE02 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				1F9FF5BD2B5755FE00213815 /* AppDelegate.swift */,
 				1F9FF5BF2B5755FE00213815 /* SceneDelegate.swift */,
 				1F9FF5C12B5755FE00213815 /* ViewController.swift */,
+				42A3E63C2B576579007BBE02 /* CategoryTableViewController.swift */,
 				1F9FF5C62B5755FF00213815 /* Assets.xcassets */,
 				1F9FF5C82B5755FF00213815 /* LaunchScreen.storyboard */,
 				1F9FF5CB2B5755FF00213815 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9FF5C22B5755FE00213815 /* ViewController.swift in Sources */,
+				42A3E63D2B576579007BBE02 /* CategoryTableViewController.swift in Sources */,
 				1F9FF5BE2B5755FE00213815 /* AppDelegate.swift in Sources */,
 				1F9FF5C02B5755FE00213815 /* SceneDelegate.swift in Sources */,
 			);
