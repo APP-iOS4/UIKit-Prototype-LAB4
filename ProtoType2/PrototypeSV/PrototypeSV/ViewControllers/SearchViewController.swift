@@ -144,6 +144,13 @@ class SearchViewController: UIViewController {
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(contentStackView)
         
+        NSLayoutConstraint.activate([
+            contentStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            contentStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10)
+        ])
+        
         // contentStackView 안쪽 내용들
         
         let searchBar: UIStackView = UIStackView()
@@ -269,5 +276,5 @@ class SearchViewController: UIViewController {
 }
 
 #Preview("SearchViewController"){
-    SearchViewController()
+    UINavigationController(rootViewController: SearchViewController())
 }

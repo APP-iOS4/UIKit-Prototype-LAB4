@@ -23,7 +23,8 @@ class FourthSceneViewController: ViewController {
         
         self.title = "해리윤호와 태훈님의 돌"
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25)
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
         buildInterface()

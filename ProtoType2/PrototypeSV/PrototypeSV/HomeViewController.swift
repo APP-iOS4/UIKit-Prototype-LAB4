@@ -19,7 +19,8 @@ class HomeViewController: ViewController {
         self.navigationController?.navigationBar.topItem?.title = "하윤호님 반갑습니다."
         self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25)
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
         buildInterface()
@@ -174,4 +175,8 @@ class HomeViewController: ViewController {
         let nextViewController = FourthSceneViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
+}
+
+#Preview("HomeViewController"){
+    UINavigationController(rootViewController: HomeViewController())
 }
