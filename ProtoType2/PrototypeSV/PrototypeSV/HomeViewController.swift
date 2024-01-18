@@ -17,7 +17,7 @@ class HomeViewController: ViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = "하윤호님 반갑습니다."
-        self.navigationController?.hidesBarsOnSwipe = true
+        // self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
             NSAttributedString.Key.foregroundColor: UIColor.white
@@ -69,7 +69,6 @@ class HomeViewController: ViewController {
 
         miniScrollView.contentSize = CGSize(width: 650, height: 200)
         miniScrollView.translatesAutoresizingMaskIntoConstraints = false
-
         
         for i in 0 ... 3 {
             let imageView = UIImageView()

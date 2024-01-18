@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.topItem?.title = "검색어를 입력하세요."
+        self.navigationController?.navigationBar.topItem?.title = "검색"
         
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
@@ -39,11 +39,11 @@ class SearchViewController: UIViewController {
     
     let searchField: UITextField = {
         let textField: UITextField = UITextField()
-        // textField.placeholder = "검색어를 입력해 주세요"
         textField.textAlignment = .left
         textField.textColor = .white
-        textField.backgroundColor = .black
+        textField.backgroundColor = .darkGray
         textField.borderStyle = .roundedRect
+        textField.clearButtonMode = .whileEditing
         return textField
     }()
     
@@ -158,6 +158,11 @@ class SearchViewController: UIViewController {
         searchBar.axis = .horizontal
         searchBar.alignment = .center
         searchBar.spacing = 20
+        
+        searchField.attributedPlaceholder = NSAttributedString(
+            string: "검색어를 입력해 주세요.",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
+        )
         
         searchBar.addArrangedSubview(searchField)
         searchBar.addArrangedSubview(searchButton)

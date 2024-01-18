@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // recentViewController
         let recentViewController = RecentViewController()
-        recentViewController.tabBarItem = UITabBarItem(title: "이어보기", image: UIImage(systemName: "play.rectangle"), tag: 1)
+        recentViewController.tabBarItem = UITabBarItem(title: "내 기록", image: UIImage(systemName: "person.crop.circle.badge.clock.fill"), tag: 1)
         
         // categoryTableViewController
         let categoryTableViewController = CategoryTableViewController()
@@ -43,8 +43,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [
             homeNavigationController,
-            recentViewController,
             categoryNavigationController,
+            recentViewController,
             searchNavigationController,
         ]
         
