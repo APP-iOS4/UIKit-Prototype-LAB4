@@ -7,8 +7,46 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
 
+    let harryPotter = [
+        "HarryPotter1",
+        "harryPotter2",
+        "harryPotter3",
+        "harryPotter4",
+        "harryPotter5",
+        "harryPotter6",
+        "harryPotter7",
+    ]
+    
+    
+    let fantasyMovies = [
+        "starWars",
+        "avatar",
+        "hobit",
+        "transformer",
+    ]
+    
+    let seriesMovies = [
+        "avengers",
+        "caribbean",
+        "spiderman",
+        "toyStory"
+    ]
+    
+    let recommended = [
+        "cooperate",
+        "kimsabu",
+        "walkingDead",
+        "penthHouse"
+    ]
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        search()
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +57,8 @@ class SearchViewController: UIViewController {
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
+        self.searchField.delegate = self
+        
         buildInterface()
     }
     
@@ -27,7 +67,6 @@ class SearchViewController: UIViewController {
         sv.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
         return sv
     }()
-    
     
     let contentStackView: UIStackView = {
         let stackView = UIStackView()
@@ -56,7 +95,7 @@ class SearchViewController: UIViewController {
     let selectButton: UIButton = {
         let button: UIButton = UIButton()
         button.backgroundColor = .clear
-        button.frame = CGRect(x: 0, y: 0, width: 190, height: 250)
+        button.frame = CGRect(x: 0, y: 0, width: 180, height: 250)
         return button
     }()
     
@@ -80,7 +119,7 @@ class SearchViewController: UIViewController {
     
     let label3: UILabel = {
         let label: UILabel = UILabel()
-        label.text = "또 다른 시리즈 영화"
+        label.text = "시리즈 영화 추천!"
         label.textColor = .white
         label.font = .preferredFont(forTextStyle: .title2)
         label.textAlignment = .left
@@ -99,28 +138,28 @@ class SearchViewController: UIViewController {
     let miniScrollView: UIScrollView = {
         let scroll: UIScrollView = UIScrollView()
         scroll.backgroundColor = .clear
-        scroll.contentSize = CGSize(width: 550, height: 250)
+        scroll.contentSize = CGSize(width: 1320, height: 250)
         return scroll
     }()
     
     let subScrollView1: UIScrollView = {
         let scroll: UIScrollView = UIScrollView()
         scroll.backgroundColor = .clear
-        scroll.contentSize = CGSize(width: 550, height: 200)
+        scroll.contentSize = CGSize(width: 600, height: 180)
         return scroll
     }()
     
     let subScrollView2: UIScrollView = {
         let scroll: UIScrollView = UIScrollView()
         scroll.backgroundColor = .clear
-        scroll.contentSize = CGSize(width: 550, height: 200)
+        scroll.contentSize = CGSize(width: 600, height: 180)
         return scroll
     }()
     
     let subScrollView3: UIScrollView = {
         let scroll: UIScrollView = UIScrollView()
         scroll.backgroundColor = .clear
-        scroll.contentSize = CGSize(width: 550, height: 200)
+        scroll.contentSize = CGSize(width: 600, height: 180)
         return scroll
     }()
     
@@ -173,10 +212,13 @@ class SearchViewController: UIViewController {
         
         
         
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Search1.png")
-        imageView.frame = CGRect(x: 0, y: 0, width:550, height: 250)
-        miniScrollView.addSubview(imageView)
+        
+        for i in 0 ..< harryPotter.count {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: harryPotter[i])
+            imageView.frame = CGRect(x: 0 + (190 * i), y: 0, width: 180, height: 250)
+            miniScrollView.addSubview(imageView)
+        }
         
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
         
@@ -198,20 +240,26 @@ class SearchViewController: UIViewController {
         subScrollView2.translatesAutoresizingMaskIntoConstraints = false
         subScrollView3.translatesAutoresizingMaskIntoConstraints = false
         
-        let imageView1 = UIImageView()
-        imageView1.image = UIImage(named: "Search2")
-        imageView1.frame = CGRect(x: 0, y: 0, width:550, height: 200)
-        subScrollView1.addSubview(imageView1)
+        for i in 0 ..< fantasyMovies.count {
+            let imageView1 = UIImageView()
+            imageView1.image = UIImage(named: fantasyMovies[i])
+            imageView1.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            subScrollView1.addSubview(imageView1)
+        }
         
-        let imageView2 = UIImageView()
-        imageView2.image = UIImage(named: "Search3")
-        imageView2.frame = CGRect(x: 0, y: 0, width:550, height: 200)
-        subScrollView2.addSubview(imageView2)
+        for i in 0 ..< seriesMovies.count {
+            let imageView2 = UIImageView()
+            imageView2.image = UIImage(named: seriesMovies[i])
+            imageView2.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            subScrollView2.addSubview(imageView2)
+        }
         
-        let imageView3 = UIImageView()
-        imageView3.image = UIImage(named: "Search4")
-        imageView3.frame = CGRect(x: 0, y: 0, width:550, height: 200)
-        subScrollView3.addSubview(imageView3)
+        for i in 0 ..< recommended.count {
+            let imageView3 = UIImageView()
+            imageView3.image = UIImage(named: recommended[i])
+            imageView3.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            subScrollView3.addSubview(imageView3)
+        }
         
         NSLayoutConstraint.activate([
             label1.widthAnchor.constraint(equalToConstant: view.frame.width),
@@ -245,6 +293,8 @@ class SearchViewController: UIViewController {
         self.subScrollView1.isHidden = true
         self.subScrollView2.isHidden = true
         self.subScrollView3.isHidden = true
+        
+        scrollView.keyboardDismissMode = .onDrag
     }
     
     @objc func search() {
