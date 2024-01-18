@@ -76,16 +76,28 @@ class HomeViewController: ViewController {
         let label = UILabel()
         label.text = "최근 핫한 컨텐츠들!"
         label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.textColor = .white
         contentStackView.addArrangedSubview(label)
         
-        miniScrollView.contentSize = CGSize(width: 300 * hotContents.count, height: 400)
+        miniScrollView.contentSize = CGSize(width: 300 * (hotContents.count), height: 400)
         miniScrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        for i in 0 ..< hotContents.count {
+        let recommendStackView = UIStackView()
+        recommendStackView.axis = .horizontal
+        recommendStackView.spacing = 10
+        recommendStackView.translatesAutoresizingMaskIntoConstraints = false
+        miniScrollView.addSubview(recommendStackView)
+        
+        for hotContent in hotContents {
             let imageView = UIImageView()
-            imageView.image = UIImage(named: hotContents[i])
-            imageView.frame = CGRect(x: 0 + (300 * i), y: 0, width: 290, height: 400)
-            miniScrollView.addSubview(imageView)
+            imageView.image = UIImage(named: hotContent)
+            
+            NSLayoutConstraint.activate([
+                imageView.widthAnchor.constraint(equalToConstant: 300),
+                imageView.heightAnchor.constraint(equalToConstant: 400)
+            ])
+
+            recommendStackView.addArrangedSubview(imageView)
         }
         
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
@@ -107,6 +119,7 @@ class HomeViewController: ViewController {
         let label2 = UILabel()
         label2.text = "요즘 대세 영화... 이게 MZ다"
         label2.font = UIFont.preferredFont(forTextStyle: .title2)
+        label2.textColor = .white
         contentStackView.addArrangedSubview(label2)
         
         let miniScrollView2 = UIScrollView()
@@ -114,13 +127,24 @@ class HomeViewController: ViewController {
         miniScrollView2.contentSize = CGSize(width: 150 * movies.count, height: 200)
         miniScrollView2.translatesAutoresizingMaskIntoConstraints = false
         
-        for i in 0 ..< movies.count {
-            let imageView = UIImageView()
-            imageView.image = UIImage(named: movies[i])
-            imageView.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
-            miniScrollView2.addSubview(imageView)
-        }
+        let movieStackView = UIStackView()
+        movieStackView.axis = .horizontal
+        movieStackView.spacing = 10
+        movieStackView.translatesAutoresizingMaskIntoConstraints = false
+        miniScrollView2.addSubview(movieStackView)
         
+        for movie in movies {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: movie)
+            
+            NSLayoutConstraint.activate([
+                imageView.widthAnchor.constraint(equalToConstant: 140),
+                imageView.heightAnchor.constraint(equalToConstant: 180)
+            ])
+
+            movieStackView.addArrangedSubview(imageView)
+        }
+
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
         let button2 = UIButton()
         button2.backgroundColor = .clear
@@ -143,6 +167,7 @@ class HomeViewController: ViewController {
         let label3 = UILabel()
         label3.text = "드라마? 함 들라 마!"
         label3.font = UIFont.preferredFont(forTextStyle: .title2)
+        label3.textColor = .white
         contentStackView.addArrangedSubview(label3)
 
         let miniScrollView3 = UIScrollView()
@@ -150,11 +175,22 @@ class HomeViewController: ViewController {
         miniScrollView3.contentSize = CGSize(width:  150 * dramas.count, height: 200)
         miniScrollView3.translatesAutoresizingMaskIntoConstraints = false
         
-        for i in 0 ..< dramas.count {
+        let dramaStackView = UIStackView()
+        dramaStackView.axis = .horizontal
+        dramaStackView.spacing = 10
+        dramaStackView.translatesAutoresizingMaskIntoConstraints = false
+        miniScrollView3.addSubview(dramaStackView)
+        
+        for drama in dramas {
             let imageView = UIImageView()
-            imageView.image = UIImage(named: dramas[i])
-            imageView.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
-            miniScrollView3.addSubview(imageView)
+            imageView.image = UIImage(named: drama)
+            
+            NSLayoutConstraint.activate([
+                imageView.widthAnchor.constraint(equalToConstant: 140),
+                imageView.heightAnchor.constraint(equalToConstant: 180)
+            ])
+
+            dramaStackView.addArrangedSubview(imageView)
         }
         
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
