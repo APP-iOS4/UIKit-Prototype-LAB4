@@ -31,8 +31,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         searchNavigationController.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 3)
         
         // recentViewController
-        let recentViewController = RecentViewController()
-        recentViewController.tabBarItem = UITabBarItem(title: "내 기록", image: UIImage(systemName: "person.crop.circle.badge.clock.fill"), tag: 1)
+        let historyViewController = HistoryViewController()
+        let historyNavigationController = UINavigationController(rootViewController: historyViewController)
+        historyNavigationController.tabBarItem = UITabBarItem(title: "내 기록", image: UIImage(systemName: "person.crop.circle.badge.clock.fill"), tag: 1)
         
         // categoryTableViewController
         let categoryTableViewController = CategoryTableViewController()
@@ -44,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.viewControllers = [
             homeNavigationController,
             categoryNavigationController,
-            recentViewController,
+            historyNavigationController,
             searchNavigationController,
         ]
         
