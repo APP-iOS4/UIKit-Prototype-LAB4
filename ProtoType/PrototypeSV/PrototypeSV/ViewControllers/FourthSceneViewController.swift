@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 
 class FourthSceneViewController: UIViewController {
+    
+    let harryPotterPosters: [String] = ["HarryPotter1", "harryPotter2", "harryPotter3", "harryPotter4", "harryPotter5", "harryPotter6", "harryPotter7"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +68,16 @@ class FourthSceneViewController: UIViewController {
         // ScrollView - Poster 담기 위한 ScrollView
         let posterScrollView = UIScrollView()
         posterScrollView.backgroundColor = .gray
-        posterScrollView.contentSize = CGSize(width: 500, height: 50)
+        posterScrollView.contentSize = CGSize(width: 1040, height: 80)
+        posterScrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        for index in 0..<harryPotterPosters.count {
+            let imageView = UIImageView()
+            imageView.backgroundColor = .red
+            imageView.image = UIImage(named: harryPotterPosters[index])
+            imageView.frame = CGRect(x: 0 + (150 * index), y: 0, width: 140, height: 180)
+            posterScrollView.addSubview(imageView)
+        }
         
         let imageView = UIImageView()
         imageView.image = UIImage(named: "gamsangpyung")
@@ -81,7 +92,7 @@ class FourthSceneViewController: UIViewController {
         subStackView.distribution = .fill
         subStackView.spacing = 10
         subStackView.backgroundColor = .blue
-        subStackView.frame = CGRect(x: 0, y: 0, width: Int(view.frame.width), height: 500)
+        subStackView.frame = CGRect(x: 0, y: 0, width: Int(view.frame.width), height: 620)
         
         subStackView.addArrangedSubview(summaryWorkLabel)
         subStackView.addArrangedSubview(detailWorkLabel)
@@ -96,6 +107,8 @@ class FourthSceneViewController: UIViewController {
             mainStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+            
+            posterScrollView.heightAnchor.constraint(equalToConstant: 180),
             
             imageView.heightAnchor.constraint(equalToConstant: 100)
         ])
