@@ -267,3 +267,7 @@ class SearchViewController: UIViewController {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
+
+#Preview("SearchViewController"){
+    SearchViewController()
+}
