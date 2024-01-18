@@ -16,6 +16,11 @@ class FourthSceneViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "해리포터와 마법사의 돌"
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        self.view.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
 
         setLayout()
     }
@@ -34,8 +39,8 @@ class FourthSceneViewController: UIViewController {
         
         // ScrollView - WebView를 제외한 나머지 컨텐츠 담기
         let mainScrollView = UIScrollView()
-        mainScrollView.backgroundColor = .systemPink
-        mainScrollView.contentSize = CGSize(width: Int(view.frame.width), height: 800)
+        mainScrollView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
+        mainScrollView.contentSize = CGSize(width: Int(view.frame.width), height: 560)
         
         // MainStackView
         let mainStackView = UIStackView()
@@ -52,28 +57,34 @@ class FourthSceneViewController: UIViewController {
         // Label - 작품 1줄 설명
         let summaryWorkLabel = UILabel()
         summaryWorkLabel.text = "마법사의 전설이 시작된다."
+        summaryWorkLabel.textColor = .white
         summaryWorkLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        summaryWorkLabel.translatesAutoresizingMaskIntoConstraints = false
+        summaryWorkLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         // Label - 작품 디테일 설명
         let detailWorkLabel = UILabel()
         detailWorkLabel.numberOfLines = 0
         detailWorkLabel.text = "평점: 8.5 / 10\n\n개봉일: 2001. 11.\n\n감독: 크리스 콜럼버스\n\n출연진: 다니엘 레드클리프, 엠마 왓슨, 이선준 외"
+        detailWorkLabel.textColor = .white
         detailWorkLabel.font = .systemFont(ofSize: 15, weight: .bold)
+//        detailWorkLabel.translatesAutoresizingMaskIntoConstraints = false
+//        summaryWorkLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
         // Label - 작품 시리즈 포스터
         let posterLabel = UILabel()
         posterLabel.text = "해리포터의 정주행 순서"
         posterLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        posterLabel.textColor = .white
         
         // ScrollView - Poster 담기 위한 ScrollView
         let posterScrollView = UIScrollView()
-        posterScrollView.backgroundColor = .gray
+        posterScrollView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
         posterScrollView.contentSize = CGSize(width: 1040, height: 80)
         posterScrollView.translatesAutoresizingMaskIntoConstraints = false
         
         for index in 0..<harryPotterPosters.count {
             let imageView = UIImageView()
-            imageView.backgroundColor = .red
             imageView.image = UIImage(named: harryPotterPosters[index])
             imageView.frame = CGRect(x: 0 + (150 * index), y: 0, width: 140, height: 180)
             posterScrollView.addSubview(imageView)
@@ -81,7 +92,7 @@ class FourthSceneViewController: UIViewController {
         
         let imageView = UIImageView()
         imageView.image = UIImage(named: "gamsangpyung")
-        imageView.backgroundColor = .brown
+        imageView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -91,8 +102,8 @@ class FourthSceneViewController: UIViewController {
         subStackView.alignment = .fill
         subStackView.distribution = .fill
         subStackView.spacing = 10
-        subStackView.backgroundColor = .blue
-        subStackView.frame = CGRect(x: 0, y: 0, width: Int(view.frame.width), height: 620)
+        subStackView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
+        subStackView.frame = CGRect(x: 0, y: 0, width: Int(view.frame.width), height: 560)
         
         subStackView.addArrangedSubview(summaryWorkLabel)
         subStackView.addArrangedSubview(detailWorkLabel)
