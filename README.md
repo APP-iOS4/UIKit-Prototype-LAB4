@@ -11,14 +11,40 @@
 ### SwiftView 는요.
 * 드라마나 영화 시리즈를 쉽게 찾아볼 수 있는 OTT 서비스 앱 이에요!<br>
 * 어느 날, 해리포터가 보고 싶어서 OTT에 검색을 했어요. 쭉 시리즈가 나오는데 스토리 순서를 모르겠더라구요!!!<br>
-그래서 따로 인터넷에 들어가 해리포터 시리즈 검색을 해야했죠...😿<br><br>
-* **특징 1️⃣ 검색만 해도 영화 시리즈를 알아서 정렬해주는 기능!!!**<br>
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/72730841/062a3b35-4a8f-4543-94c2-ee75006631f1" width="30%" height="20%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br><br>
+그래서 따로 인터넷에 들어가 해리포터 시리즈 검색을 해야했죠...😿
+<br><br>
 
-* **특징 2️⃣ '내 기록'라는 탭을 만들어 여러분이 보다 말았던 작품에 바로 접근할 수 있도록 하였습니다.!**<br>
- O플릭스의 경우 '나의 넷플릭스'의 접근성이 예고편 보기 위주로 되어있는 점을 참고하여,<br>
- 유O브를 벤치마킹 하여 손쉽게 사용자가 이전에 본 컨텐츠를 다시 볼 수 있습니다!!<br> 
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/72730841/257b9496-82c7-411a-8362-a07dec9d1d82" width="30%" height="20%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br><br><br>
+* **특징 1️⃣ 영화 시리즈를 알아서 정렬해주는 기능!!!**<br>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/fc832989-c506-4864-b004-e0027adad4d3" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/1984cec7-017a-45b1-9b1c-66c28542b785" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+<br><br>
+
+* **특징 2️⃣ '카테고리' 탭을 만들어 여러분의 취향에 맞는 드라마나 영화를 쉽게 탐색 하실 수 있습니다!**<br>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/be3a99fe-35d9-44df-8001-2f3dbbc5a355" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/215b7715-60a9-4f19-b712-49df9b36a129" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br><br>
+
+<br>
+
+* **특징 3️⃣ '내 기록' 탭을 만들어 여러분이 보다 말았던 작품에 바로 접근할 수 있도록 하였습니다!**<br>
+ O플릭스의 경우 '나의 O플릭스'의 접근성이 예고편 보기 위주로 되어있는 점을 참고하여,<br>
+ 유O브를 벤치마킹 하여 손쉽게 사용자가 이전에 본 컨텐츠를 다시 볼 수 있습니다!!<br>
+ 
+|O플릭스|SwiftView|
+|:---:|:---:|
+|<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/4879090d-18b0-4348-8a3a-7f00f8b8f06a" width="70%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>|<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/37f7812e-2330-47b2-8a0b-802d8d7dc41c" width="65%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>|
+
+<br>
+
+* **특징 4️⃣ '검색' 탭을 만들어 여러분이 찾고자 하는 컨텐츠를 쉽게 찾을 수 있습니다!**<br>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/d84c5ebd-3fc5-4a93-9465-1d7d8354312f" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/939dabc9-005f-44dc-a39a-902da33a6677" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br><br>
+
+* **특징 5️⃣ 재밌게 보세요!!!!!**<br>
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB4/assets/101854288/e5db3eaa-135b-407f-9473-f7ff88c5f6b5" width="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+
+<br><br>
+
 
 # App Define Statements
 OTT를 시청하는 이용자가<br>
