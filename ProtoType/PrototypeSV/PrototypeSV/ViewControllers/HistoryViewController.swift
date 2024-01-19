@@ -19,7 +19,7 @@ class HistoryViewController: ViewController {
         self.navigationController?.navigationBar.topItem?.title = "하윤호님의 시청기록"
         // self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
@@ -124,7 +124,7 @@ class HistoryViewController: ViewController {
             let label: UILabel = UILabel()
             label.text = "이어서 볼 컨텐츠"
             label.textColor = .white
-            label.font = .preferredFont(forTextStyle: .title3)
+            label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
@@ -206,7 +206,7 @@ class HistoryViewController: ViewController {
             let label: UILabel = UILabel()
             label.text = "최근에 본 컨텐츠"
             label.textColor = .white
-            label.font = .preferredFont(forTextStyle: .title3)
+            label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()

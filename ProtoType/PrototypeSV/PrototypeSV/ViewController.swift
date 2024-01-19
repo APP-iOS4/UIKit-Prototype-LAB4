@@ -13,6 +13,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
+        
+        // 탭바 다크 모드 발동!!!!!
+        tabBarController!.tabBar.barStyle = .black
+
+        // 네비바 다크모드!
+        navigationController!.navigationBar.barStyle = .black
     }
     // 빠른 포기~
 

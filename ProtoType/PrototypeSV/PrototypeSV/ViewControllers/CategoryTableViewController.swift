@@ -43,14 +43,27 @@ class CategoryTableViewController: UITableViewController {
         
         self.title = "카테고리"
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
+        
+        // 탭바 다크 모드 발동!!!!!
+        tabBarController!.tabBar.barStyle = .black
+
+        // 네비바 다크모드!
+        navigationController!.navigationBar.barStyle = .black
         
         self.view.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
         
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         segmentedControl.selectedSegmentIndex = 0
+        
+        segmentedControl.selectedSegmentTintColor = UIColor.darkGray
+        
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        let titleTextAttributes2 = [NSAttributedString.Key.foregroundColor: UIColor(red: 131/255, green: 213/255, blue: 236/255, alpha: 1)]
+        segmentedControl.setTitleTextAttributes(titleTextAttributes2, for: .selected)
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         tableView.delegate = self

@@ -75,7 +75,7 @@ class HomeViewController: ViewController {
         // MARK: - First Cell
         let label = UILabel()
         label.text = "최근 핫한 컨텐츠들!"
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label.textColor = .white
         contentStackView.addArrangedSubview(label)
         
@@ -118,7 +118,7 @@ class HomeViewController: ViewController {
         // MARK: - Second Cell
         let label2 = UILabel()
         label2.text = "요즘 대세 영화... 이게 MZ다"
-        label2.font = UIFont.preferredFont(forTextStyle: .title2)
+        label2.font =  UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label2.textColor = .white
         contentStackView.addArrangedSubview(label2)
         
@@ -166,7 +166,7 @@ class HomeViewController: ViewController {
         // MARK: - Third Cell
         let label3 = UILabel()
         label3.text = "드라마? 함 들라 마!"
-        label3.font = UIFont.preferredFont(forTextStyle: .title2)
+        label3.font =  UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label3.textColor = .white
         contentStackView.addArrangedSubview(label3)
 

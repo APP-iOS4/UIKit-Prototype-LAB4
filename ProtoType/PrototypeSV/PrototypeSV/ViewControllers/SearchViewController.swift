@@ -53,11 +53,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.topItem?.title = "검색"
         
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
         self.searchField.delegate = self
+        
+        searchField.keyboardAppearance = .dark
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
@@ -106,7 +108,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         let label: UILabel = UILabel()
         label.text = "해리포터 스토리 정주행"
         label.textColor = .white
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label.textAlignment = .left
         return label
     }()
@@ -115,7 +117,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         let label: UILabel = UILabel()
         label.text = "판타지를 원하세요?"
         label.textColor = .white
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label.textAlignment = .left
         return label
     }()
@@ -124,7 +126,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         let label: UILabel = UILabel()
         label.text = "시리즈 영화 추천!"
         label.textColor = .white
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label.textAlignment = .left
         return label
     }()
@@ -133,7 +135,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         let label: UILabel = UILabel()
         label.text = "이건 어떠세요?"
         label.textColor = .white
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
         label.textAlignment = .left
         return label
     }()

@@ -17,7 +17,7 @@ class FourthSceneViewController: UIViewController {
         
         self.title = "해리포터와 마법사의 돌"
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25),
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         self.view.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
@@ -58,7 +58,7 @@ class FourthSceneViewController: UIViewController {
         let summaryWorkLabel = UILabel()
         summaryWorkLabel.text = "마법사의 전설이 시작된다."
         summaryWorkLabel.textColor = .white
-        summaryWorkLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        summaryWorkLabel.font = .systemFont(ofSize: 23.0, weight: .bold)
         summaryWorkLabel.translatesAutoresizingMaskIntoConstraints = false
         summaryWorkLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
@@ -74,7 +74,7 @@ class FourthSceneViewController: UIViewController {
         // Label - 작품 시리즈 포스터
         let posterLabel = UILabel()
         posterLabel.text = "해리포터의 정주행 순서"
-        posterLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        posterLabel.font = .systemFont(ofSize: 23.0, weight: .bold)
         posterLabel.textColor = .white
         
         // ScrollView - Poster 담기 위한 ScrollView
