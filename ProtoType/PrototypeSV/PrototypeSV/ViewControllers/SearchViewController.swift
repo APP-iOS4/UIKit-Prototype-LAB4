@@ -59,6 +59,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         
         self.searchField.delegate = self
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+        
         buildInterface()
     }
     
@@ -243,21 +246,21 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         for i in 0 ..< fantasyMovies.count {
             let imageView1 = UIImageView()
             imageView1.image = UIImage(named: fantasyMovies[i])
-            imageView1.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            imageView1.frame = CGRect(x: 0 + (140 * i), y: 0, width: 130, height: 180)
             subScrollView1.addSubview(imageView1)
         }
         
         for i in 0 ..< seriesMovies.count {
             let imageView2 = UIImageView()
             imageView2.image = UIImage(named: seriesMovies[i])
-            imageView2.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            imageView2.frame = CGRect(x: 0 + (140 * i), y: 0, width: 130, height: 180)
             subScrollView2.addSubview(imageView2)
         }
         
         for i in 0 ..< recommended.count {
             let imageView3 = UIImageView()
             imageView3.image = UIImage(named: recommended[i])
-            imageView3.frame = CGRect(x: 0 + (150 * i), y: 0, width: 140, height: 180)
+            imageView3.frame = CGRect(x: 0 + (140 * i), y: 0, width: 130, height: 180)
             subScrollView3.addSubview(imageView3)
         }
         
@@ -324,12 +327,20 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         searchField.resignFirstResponder()
     }
     
+    @objc func handleTap() {
+           // TextField가 현재 편집 중이면 키보드를 내림
+           if searchField.isFirstResponder {
+               searchField.resignFirstResponder()
+           }
+       }
+       
+    
     @objc func selectMovie() {
         let nextViewController = FourthSceneViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
 
-#Preview("SearchViewController"){
-    UINavigationController(rootViewController: SearchViewController())
-}
+//#Preview("SearchViewController"){
+//    UINavigationController(rootViewController: SearchViewController())
+//}

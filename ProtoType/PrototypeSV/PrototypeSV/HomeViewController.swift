@@ -138,7 +138,7 @@ class HomeViewController: ViewController {
             imageView.image = UIImage(named: movie)
             
             NSLayoutConstraint.activate([
-                imageView.widthAnchor.constraint(equalToConstant: 140),
+                imageView.widthAnchor.constraint(equalToConstant: 130),
                 imageView.heightAnchor.constraint(equalToConstant: 180)
             ])
 
@@ -186,7 +186,7 @@ class HomeViewController: ViewController {
             imageView.image = UIImage(named: drama)
             
             NSLayoutConstraint.activate([
-                imageView.widthAnchor.constraint(equalToConstant: 140),
+                imageView.widthAnchor.constraint(equalToConstant: 130),
                 imageView.heightAnchor.constraint(equalToConstant: 180)
             ])
 

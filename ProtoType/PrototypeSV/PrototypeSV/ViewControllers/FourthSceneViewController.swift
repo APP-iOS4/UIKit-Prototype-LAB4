@@ -67,7 +67,7 @@ class FourthSceneViewController: UIViewController {
         detailWorkLabel.numberOfLines = 0
         detailWorkLabel.text = "평점: 8.5 / 10\n\n개봉일: 2001. 11.\n\n감독: 크리스 콜럼버스\n\n출연진: 다니엘 레드클리프, 엠마 왓슨, 이선준 외"
         detailWorkLabel.textColor = .white
-        detailWorkLabel.font = .systemFont(ofSize: 15, weight: .bold)
+        detailWorkLabel.font = .systemFont(ofSize: 15)
 //        detailWorkLabel.translatesAutoresizingMaskIntoConstraints = false
 //        summaryWorkLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
@@ -80,13 +80,13 @@ class FourthSceneViewController: UIViewController {
         // ScrollView - Poster 담기 위한 ScrollView
         let posterScrollView = UIScrollView()
         posterScrollView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
-        posterScrollView.contentSize = CGSize(width: 1040, height: 80)
+        posterScrollView.contentSize = CGSize(width: 970, height: 80)
         posterScrollView.translatesAutoresizingMaskIntoConstraints = false
         
         for index in 0..<harryPotterPosters.count {
             let imageView = UIImageView()
             imageView.image = UIImage(named: harryPotterPosters[index])
-            imageView.frame = CGRect(x: 0 + (150 * index), y: 0, width: 140, height: 180)
+            imageView.frame = CGRect(x: 0 + (140 * index), y: 0, width: 130, height: 180)
             posterScrollView.addSubview(imageView)
         }
         
