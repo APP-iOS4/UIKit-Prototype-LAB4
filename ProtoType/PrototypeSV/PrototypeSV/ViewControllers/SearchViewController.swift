@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITextFieldDelegate {
+class SearchViewController: ViewController, UITextFieldDelegate {
 
     let harryPotter = [
         "HarryPotter1",
@@ -239,7 +239,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         ])
         
         contentStackView.addArrangedSubview(miniScrollView)
-        
+        contentStackView.setCustomSpacing(40, after: miniScrollView)
         
         subScrollView1.translatesAutoresizingMaskIntoConstraints = false
         subScrollView2.translatesAutoresizingMaskIntoConstraints = false
@@ -272,17 +272,19 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             label3.widthAnchor.constraint(equalToConstant: view.frame.width),
             label4.widthAnchor.constraint(equalToConstant: view.frame.width),
             subScrollView1.widthAnchor.constraint(equalToConstant: view.frame.width),
-            subScrollView1.heightAnchor.constraint(equalToConstant: 200),
+            subScrollView1.heightAnchor.constraint(equalToConstant: 180),
             subScrollView2.widthAnchor.constraint(equalToConstant: view.frame.width),
-            subScrollView2.heightAnchor.constraint(equalToConstant: 200),
+            subScrollView2.heightAnchor.constraint(equalToConstant: 180),
             subScrollView3.widthAnchor.constraint(equalToConstant: view.frame.width),
-            subScrollView3.heightAnchor.constraint(equalToConstant: 200),
+            subScrollView3.heightAnchor.constraint(equalToConstant: 180),
         ])
         
         contentStackView.addArrangedSubview(label2)
         contentStackView.addArrangedSubview(subScrollView1)
+        contentStackView.setCustomSpacing(25, after: subScrollView1)
         contentStackView.addArrangedSubview(label3)
         contentStackView.addArrangedSubview(subScrollView2)
+        contentStackView.setCustomSpacing(25, after: subScrollView2)
         contentStackView.addArrangedSubview(label4)
         contentStackView.addArrangedSubview(subScrollView3)
         

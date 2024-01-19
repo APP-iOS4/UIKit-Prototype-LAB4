@@ -19,6 +19,9 @@ class ViewController: UIViewController {
 
         // 네비바 다크모드!
         navigationController!.navigationBar.barStyle = .black
+        
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     // 빠른 포기~
 

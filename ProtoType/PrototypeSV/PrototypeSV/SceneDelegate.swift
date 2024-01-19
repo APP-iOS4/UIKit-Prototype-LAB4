@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         
+        
         // homeviewController
         let homeViewController = HomeViewController()
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
@@ -33,6 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // recentViewController
         let historyViewController = HistoryViewController()
         let historyNavigationController = UINavigationController(rootViewController: historyViewController)
+        historyNavigationController.navigationBar.tintColor = .white
         historyNavigationController.tabBarItem = UITabBarItem(title: "내 기록", image: UIImage(systemName: "person.crop.circle.badge.clock.fill"), tag: 1)
         
         // categoryTableViewController
@@ -42,6 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // tab bar
         let tabBarController = UITabBarController()
+        tabBarController.tabBar.tintColor = UIColor(red: 131/255, green: 213/255, blue: 236/255, alpha: 1)
         tabBarController.viewControllers = [
             homeNavigationController,
             categoryNavigationController,

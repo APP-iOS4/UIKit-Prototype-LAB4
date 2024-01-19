@@ -20,6 +20,7 @@ class FourthSceneViewController: UIViewController {
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
+        
         self.view.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
 
         setLayout()

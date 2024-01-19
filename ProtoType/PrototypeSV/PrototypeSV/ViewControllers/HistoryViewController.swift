@@ -17,7 +17,6 @@ class HistoryViewController: ViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = "하윤호님의 시청기록"
-        // self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27),
             NSAttributedString.Key.foregroundColor: UIColor.white
@@ -138,7 +137,7 @@ class HistoryViewController: ViewController {
             return scroll
         }()
         mainStackView.addArrangedSubview(stoppedContentsScrollView)
-        mainStackView.setCustomSpacing(40.0, after: stoppedContentsScrollView)
+        mainStackView.setCustomSpacing(25.0, after: stoppedContentsScrollView)
         NSLayoutConstraint.activate([
             stoppedContentsScrollView.widthAnchor.constraint(equalToConstant: safeArea.layoutFrame.width),
             stoppedContentsScrollView.heightAnchor.constraint(equalToConstant: posterHeight)
