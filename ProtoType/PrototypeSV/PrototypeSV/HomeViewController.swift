@@ -18,14 +18,8 @@ class HomeViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        imageView.contentMode = .scaleAspectFit
-        
-        let image = UIImage(named: "logo")
-        imageView.image = image
-        
-        navigationItem.titleView = imageView
-        
+        addLeftBarIcon("logo")
+
         buildInterface()
     }
     
@@ -212,6 +206,25 @@ class HomeViewController: ViewController {
         contentStackView.setCustomSpacing(25, after: miniScrollView2)
         contentStackView.addArrangedSubview(miniScrollView3)
     }
+    
+    func addLeftBarIcon(_ named: String) {
+
+        let logoImage = UIImage.init(named: named)
+        let logoImageView = UIImageView.init(image: logoImage)
+       
+        logoImageView.frame = CGRect(x:0.0,y:0.0, width:60,height:60.0)
+        logoImageView.contentMode = .scaleAspectFit
+       
+        let imageItem = UIBarButtonItem.init(customView: logoImageView)
+        let widthConstraint = logoImageView.widthAnchor.constraint(equalToConstant: 60)
+        let heightConstraint = logoImageView.heightAnchor.constraint(equalToConstant: 60)
+        
+        heightConstraint.isActive = true
+        widthConstraint.isActive = true
+        
+        navigationItem.leftBarButtonItem =  imageItem
+   }
+
     
     
     // MARK: - @objc function
