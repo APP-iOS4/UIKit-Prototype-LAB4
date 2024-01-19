@@ -72,11 +72,14 @@ OTT를 시청하는 이용자가<br>
 - 드라마나 영화 컨텐츠 정보(시리즈 순서 등)를 담고 있는 Model을 구현하기<br><br><br>
 
 # 죽음의 4조 팀원
-- 강태훈: [@Taehooony](https://github.com/Taehooony)
-- 김성민: [@marukim365](https://github.com/marukim365)
-- 이선준: [@SunJuneL](https://github.com/SunJuneL)
-- 이우석: [@wl00ie19](https://github.com/wl00ie19)
-- 하윤호: [@Hayunho](https://github.com/Hayunho)
+- 🏟️ 강태훈: [@Taehooony](https://github.com/Taehooony)
+- 🏎️ 김성민: [@marukim365](https://github.com/marukim365)
+- 🦥 이선준: [@SunJuneL](https://github.com/SunJuneL)
+- 🏙️ 이우석: [@wl00ie19](https://github.com/wl00ie19)
+- 🦦 하윤호: [@Hayunho](https://github.com/Hayunho)
+
+# Notice
+- 이미지 문제 시, 삭제하도록 하겠습니다.
 
 # License
 Copyright 멋쟁이사자처럼 Lab4. All rights reserved.
